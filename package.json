@@ -15,12 +15,12 @@
   "author": "Rackspace Technology",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rackspace/maybe.git"
+    "url": "git+https://github.com/rackspace/maybe-result.git"
   },
   "bugs": {
-    "url": "https://github.com/rackspace/maybe/issues"
+    "url": "https://github.com/rackspace/maybe-result/issues"
   },
-  "homepage": "https://github.com/rackspace/maybe",
+  "homepage": "https://github.com/rackspace/maybe-result",
   "contributors": [
     "Adam Fanello <adam.fanello@rackspace.com>"
   ],
