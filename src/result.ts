@@ -26,7 +26,9 @@ export type ErrorResultTypes<T extends Result<any, any>[]> = {
  */
 interface BaseResult<T, E>
   extends Iterable<T extends Iterable<infer U> ? U : never> {
+  /** `true` when this contains an "okay" value */
   readonly isOkay: boolean;
+  /** `true` when this contains an "error" value */
   readonly isError: boolean;
 
   /**

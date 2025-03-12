@@ -1,6 +1,6 @@
 {
   "name": "maybe-result",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "description": "Safe function return handling in Typescript and Javascript",
   "keywords": [
     "maybe",
@@ -15,12 +15,12 @@
   "author": "Rackspace Technology",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rackspace/maybe.git"
+    "url": "git+https://github.com/rackspace/maybe-result.git"
   },
   "bugs": {
-    "url": "https://github.com/rackspace/maybe/issues"
+    "url": "https://github.com/rackspace/maybe-result/issues"
   },
-  "homepage": "https://github.com/rackspace/maybe",
+  "homepage": "https://github.com/rackspace/maybe-result",
   "contributors": [
     "Adam Fanello <adam.fanello@rackspace.com>"
   ],
