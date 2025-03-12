@@ -1,11 +1,11 @@
 {
   "name": "maybe-result",
   "version": "0.1.0",
-  "description": "Safe function return handling without null and undefined in Typescript and Javascript",
+  "description": "Safe function return handling in Typescript and Javascript",
   "keywords": [
     "maybe",
     "typescript",
-    "optional",
+    "option",
     "result",
     "fp",
     "undefined",
@@ -55,6 +55,6 @@
     "dev": "tsup --watch",
     "lint": "eslint src",
     "prettier": "prettier --check src",
-    "test": "jest"
+    "test": "jest --coverage"
   }
 }

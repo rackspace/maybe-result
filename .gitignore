@@ -13,6 +13,7 @@
 Thumbs.db
 
 # Project specific
+coverage
 node_modules
 npm-debug.log
 dist
