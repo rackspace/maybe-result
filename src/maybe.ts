@@ -17,7 +17,9 @@ type MaybeValueTypes<T extends Maybe<any>[]> = {
  */
 interface BaseMaybe<T>
   extends Iterable<T extends Iterable<infer U> ? U : never> {
+  /** `true` when this has "some" value. */
   readonly isValue: boolean;
+  /** `false` when this is "none". */
   readonly isNone: boolean;
 
   /**
@@ -183,6 +185,7 @@ interface BaseMaybe<T>
   /**
    * Convert a `Maybe<T>` to a `Result<T, E>`, with the provided `Error` value
    * to use when this is "none".
+   *
    * @param error to use when "none"; defaults to a `NoneError`
    * @return a `Result` with this "some" as the "okay" value, or `error` as the "error".
    */
@@ -296,6 +299,10 @@ class MaybeNone implements BaseMaybe<never> {
 
 /** Error that is thrown if you unwrap a "none" `Maybe` */
 export class NoneError extends Error {
+  /**
+   * Constructor
+   * @param message (optional) message for the `Error`
+   */
   constructor(message?: string) {
     super(message ?? "Maybe is none");
   }
@@ -305,15 +312,12 @@ export class NoneError extends Error {
  * A special form of Maybe's "none" value with additional context.
  */
 class MaybeNotFound extends MaybeNone {
-  private readonly what: string[];
-
   /**
    * Construct a `Maybe` "none" that indicates a "what" wasn't found.
-   * @param what indicate "what" wasn't found.
+   * @param what texts describing "what" wasn't found.
    */
-  constructor(what: string[]) {
+  constructor(private readonly what: string[]) {
     super();
-    this.what = what;
   }
 
   unwrap(): never {
@@ -334,7 +338,9 @@ export class NotFoundError extends Error {
 }
 
 /**
- * Contains a success "some" value
+ * Contains a success "some" value.
+ *
+ * @typeParam type of the "some" value
  */
 class MaybeValue<T> implements BaseMaybe<T> {
   readonly isValue = true as const;
