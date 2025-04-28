@@ -1,6 +1,6 @@
 {
   "name": "maybe-result",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Safe function return handling in Typescript and Javascript",
   "keywords": [
     "maybe",
